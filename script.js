@@ -1,6 +1,11 @@
 
 // Assignment code here
-
+const keys = {
+  lowercase: 'abcdefghijklmnopqrstuvwxyz',
+  uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+  numeric: '0123456789',
+  special: ' !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+};
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
