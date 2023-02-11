@@ -21,21 +21,31 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
   symbol: "!@#$%^&*()_+~\\`|}{[]:;?><,./-="
 }
 
+if (passwordLength === null) {
+  return;
+}
 
-const getOptions = [
-  function upperCase() {
-    return options.upperCase[Math.floor(Math.random() * options.upperCase.length)];
-  },
-  function lowerCase() {
-    return options.lowerCase[Math.floor(Math.random() * options.lowerCase.length)];
-  },
-  function number() {
-    return options.numeric[Math.floor(Math.random() * options.numeric.length)];
-  },
-  function symbol() {
-    return options.symbol[Math.floor(Math.random() * options.symbol.length)];
-  }
-];
+var passwordCharacters = [];
+
+var upperCaseOption = confirm("Would you like to include uppercase characters in your password?");
+if (upperCaseOption) {
+  passwordCharacters = passwordCharacters.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
+}
+
+var lowerCaseOption = confirm("Would you like to include lowercase characters in your password?");
+if (lowerCaseOption) {
+  passwordCharacters = passwordCharacters.concat("abcdefghijklmnopqrstuvwxyz".split(""));
+}
+
+var numericCaseOption = confirm("Would you like to include numeric characters in your password?");
+if (numericCaseOption) {
+  passwordCharacters = passwordCharacters.concat("0123456789".split(""));
+}
+
+var symbolCaseOption = confirm("Would you like to include symbol characters in your password?");
+if (symbolCaseOption) {
+  passwordCharacters = passwordCharacters.concat("!@#$%^&*()_+~\\`|}{[]:;?><,./-=".split(""));
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -48,6 +58,9 @@ function writePassword() {
   passwordText.value = password;
 
 }
+
+
+console.log(password);
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
