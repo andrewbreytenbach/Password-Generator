@@ -27,23 +27,18 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
   var symbolCaseOption = confirm("Would you like to include symbol characters in your password?");
   if (symbolCaseOption) {
     passwordCharacters = passwordCharacters.concat("!@#$%^&*()_+~\\`|}{[]:;?><,./-=".split(""));
-  }}
+
+  var newPassword = ""
+  for (var i = 0; i <= passwordPrompt; i++) {
+    var passwordPrompt = Math.floor(Math.random() * chars.length);
+    password += chars.substring(randomNumber, randomNumber +1);
+  }}})
 
 
 // Assignment code here
-, function generatePassword() {
+// function generatePassword() 
 
-  for (var i = 0; i <= passwordLength; i++) {
-  var randomUpper = Math.floor(Math.random() * chars.length);
-  password += chars.substring(randomNumber, randomNumber +1);
- }})
-
- const options = {
-  upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  lowerCase: "abcdefghijklmnopqrstuvwxyz",
-  numeric: "0123456789",
-  symbol: "!@#$%^&*()_+~\\`|}{[]:;?><,./-="
-}
+  
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -56,7 +51,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
 
 console.log(password);
 
