@@ -5,7 +5,31 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
   
   if (passwordPrompt === null) {
     return;
+  }
+  
+  var passwordCharacters = []
+  
+  var upperCaseOption = confirm("Would you like to include uppercase characters in your password?");
+  if (upperCaseOption) {
+    passwordCharacters = passwordCharacters.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
+  }
+  
+  var lowerCaseOption = confirm("Would you like to include lowercase characters in your password?");
+  if (lowerCaseOption) {
+    passwordCharacters = passwordCharacters.concat("abcdefghijklmnopqrstuvwxyz".split(""));
+  }
+  
+  var numericCaseOption = confirm("Would you like to include numeric characters in your password?");
+  if (numericCaseOption) {
+    passwordCharacters = passwordCharacters.concat("0123456789".split(""));
+  }
+  
+  var symbolCaseOption = confirm("Would you like to include symbol characters in your password?");
+  if (symbolCaseOption) {
+    passwordCharacters = passwordCharacters.concat("!@#$%^&*()_+~\\`|}{[]:;?><,./-=".split(""));
   }}
+
+
 // Assignment code here
 , function generatePassword() {
 
@@ -19,32 +43,6 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
   lowerCase: "abcdefghijklmnopqrstuvwxyz",
   numeric: "0123456789",
   symbol: "!@#$%^&*()_+~\\`|}{[]:;?><,./-="
-}
-
-if (passwordLength === null) {
-  return;
-}
-
-var passwordCharacters = [];
-
-var upperCaseOption = confirm("Would you like to include uppercase characters in your password?");
-if (upperCaseOption) {
-  passwordCharacters = passwordCharacters.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
-}
-
-var lowerCaseOption = confirm("Would you like to include lowercase characters in your password?");
-if (lowerCaseOption) {
-  passwordCharacters = passwordCharacters.concat("abcdefghijklmnopqrstuvwxyz".split(""));
-}
-
-var numericCaseOption = confirm("Would you like to include numeric characters in your password?");
-if (numericCaseOption) {
-  passwordCharacters = passwordCharacters.concat("0123456789".split(""));
-}
-
-var symbolCaseOption = confirm("Would you like to include symbol characters in your password?");
-if (symbolCaseOption) {
-  passwordCharacters = passwordCharacters.concat("!@#$%^&*()_+~\\`|}{[]:;?><,./-=".split(""));
 }
 
 // Get references to the #generate element
