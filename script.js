@@ -28,31 +28,29 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
   if (symbolCaseOption) {
     passwordCharacters = passwordCharacters.concat("!@#$%^&*()_+~\\`|}{[]:;?><,./-=".split(""));
 
-  var newPassword = ""
-  for (var i = 0; i <= passwordPrompt; i++) {
-    var passwordPrompt = Math.floor(Math.random() * chars.length);
-    password += chars.substring(randomNumber, randomNumber +1);
-  }}})
+  var newPassword = " "
+  for (var i = 0; i < passwordPrompt; i++) {
+    newPassword += passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
+  }
+
+  var passwordText = document.querySelector("#password");
+    passwordText.value = newPassword
+
+  console.log(newPassword);
+
+  }})
 
 
 // Assignment code here
 // function generatePassword() 
-
+ // generateBtn.addEventListener("click", writePassword());
   
 
 // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+// var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-
-}
-
-console.log(password);
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
