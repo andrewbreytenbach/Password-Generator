@@ -14,12 +14,28 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
   password += chars.substring(randomNumber, randomNumber +1);
  }})
 
- const keys = {
+ const options = {
   upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   lowerCase: "abcdefghijklmnopqrstuvwxyz",
-  number: "0123456789",
+  numeric: "0123456789",
   symbol: "!@#$%^&*()_+~\\`|}{[]:;?><,./-="
 }
+
+
+const getOptions = [
+  function upperCase() {
+    return options.upperCase[Math.floor(Math.random() * options.upperCase.length)];
+  },
+  function lowerCase() {
+    return options.lowerCase[Math.floor(Math.random() * options.lowerCase.length)];
+  },
+  function number() {
+    return options.numeric[Math.floor(Math.random() * options.numeric.length)];
+  },
+  function symbol() {
+    return options.symbol[Math.floor(Math.random() * options.symbol.length)];
+  }
+];
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
