@@ -33,7 +33,7 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
   // This creates a variable that determines whether or not a symbol option should be used in the password via an if statement. 
   var symbolCaseOption = confirm("Would you like to include symbol characters in your password?");
   if (symbolCaseOption) {
-    passwordCharacters = passwordCharacters.concat("!@#$%^&*()_+~\\`|}{[]:;?><,./-=".split(""));
+    passwordCharacters = passwordCharacters.concat(' !"\\#$%&\'()*+,-./:;<=>?@[\\\\]^_`{|}~'.split(""));
 
   // This stores the newPassword variable after randomly assigning a list of the items from the array and the preceding if statements.
   var newPassword = " "
