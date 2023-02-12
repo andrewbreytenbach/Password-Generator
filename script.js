@@ -9,7 +9,7 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
     return;
   }
   
-  //
+  // This creates an array that will later be plugged into a randomized function to create the random password. 
   var passwordCharacters = []
   
   //
