@@ -24,7 +24,7 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
     passwordCharacters = passwordCharacters.concat("abcdefghijklmnopqrstuvwxyz".split(""));
   }
   
-  //
+  // This creates a variable that determines whether or not a numeric option should be used in the password via an if statement. 
   var numericCaseOption = confirm("Would you like to include numeric characters in your password?");
   if (numericCaseOption) {
     passwordCharacters = passwordCharacters.concat("0123456789".split(""));
