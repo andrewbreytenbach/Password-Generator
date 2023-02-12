@@ -2,7 +2,7 @@
 
 ## About The Project
 
-This project was to create a professional portfolio to be used as a place to showcase my projects and skillset as a developer. This website will serve as a landing page for all of my developer projects, and it will be sent to potential employers so they can see my skills and projects. 
+The goal of this project was to take a functional HTML, CSS, and JS file and then modify it such that a password is generated, specified to the users individualized needs, when they click the 'Generate Password' button. 
 
 ### Built With
 
