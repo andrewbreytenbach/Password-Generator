@@ -9,50 +9,41 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
     return;
   }
   
+  //
   var passwordCharacters = []
   
+  //
   var upperCaseOption = confirm("Would you like to include uppercase characters in your password?");
   if (upperCaseOption) {
     passwordCharacters = passwordCharacters.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
   }
   
+  //
   var lowerCaseOption = confirm("Would you like to include lowercase characters in your password?");
   if (lowerCaseOption) {
     passwordCharacters = passwordCharacters.concat("abcdefghijklmnopqrstuvwxyz".split(""));
   }
   
+  //
   var numericCaseOption = confirm("Would you like to include numeric characters in your password?");
   if (numericCaseOption) {
     passwordCharacters = passwordCharacters.concat("0123456789".split(""));
   }
   
+  //
   var symbolCaseOption = confirm("Would you like to include symbol characters in your password?");
   if (symbolCaseOption) {
     passwordCharacters = passwordCharacters.concat("!@#$%^&*()_+~\\`|}{[]:;?><,./-=".split(""));
 
+  //
   var newPassword = " "
   for (var i = 0; i < passwordPrompt; i++) {
     newPassword += passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
   }
 
+  //
   var passwordText = document.querySelector("#password");
     passwordText.value = newPassword
 
-  console.log(newPassword);
-
   }})
-
-
-// Assignment code here
-// function generatePassword() 
- // generateBtn.addEventListener("click", writePassword());
-  
-
-// Get references to the #generate element
-// var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-
-
-// Add event listener to generate button
 
