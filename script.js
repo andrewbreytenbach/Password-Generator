@@ -18,7 +18,7 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
     passwordCharacters = passwordCharacters.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
   }
   
-  //
+  // This creates a variable that determines whether or not a lowerCase option should be used in the password via an if statement. 
   var lowerCaseOption = confirm("Would you like to include lowercase characters in your password?");
   if (lowerCaseOption) {
     passwordCharacters = passwordCharacters.concat("abcdefghijklmnopqrstuvwxyz".split(""));
