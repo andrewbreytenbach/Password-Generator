@@ -12,7 +12,7 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
   // This creates an array that will later be plugged into a randomized function to create the random password. 
   var passwordCharacters = []
   
-  //
+  // This creates a variable that determines whether or not an upperCase option should be used in the password via an if statement. 
   var upperCaseOption = confirm("Would you like to include uppercase characters in your password?");
   if (upperCaseOption) {
     passwordCharacters = passwordCharacters.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
