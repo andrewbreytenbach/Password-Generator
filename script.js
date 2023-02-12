@@ -35,7 +35,7 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
   if (symbolCaseOption) {
     passwordCharacters = passwordCharacters.concat("!@#$%^&*()_+~\\`|}{[]:;?><,./-=".split(""));
 
-  //
+  // This stores the newPassword variable after randomly assigning a list of the items from the array and the preceding if statements.
   var newPassword = " "
   for (var i = 0; i < passwordPrompt; i++) {
     newPassword += passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
