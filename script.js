@@ -41,7 +41,7 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
     newPassword += passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
   }
 
-  //
+  // This stores the newPassword from the previous for statement and inserts it into the HTML file by using the document selector option. 
   var passwordText = document.querySelector("#password");
     passwordText.value = newPassword
 
