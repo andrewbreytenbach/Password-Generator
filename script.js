@@ -4,7 +4,7 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
 
   var passwordPrompt = prompt("How many characters would you like your password to have? Please enter a number between 8 and 128 characters.");
   
-  // This will end the series of prompts since nothing was entered into the text box that meets the criteria. 
+  // This will end the series of prompts if nothing was entered into the text box that meets the criteria. 
   if (passwordPrompt === null) {
     return;
   }
