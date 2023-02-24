@@ -1,4 +1,3 @@
-
 // Add event listener to generate button. I didn't need the var generateBtn = document.querySelector("#generate"); that came with the starter code if I wrote it this way. 
 var generatedPassword = document.getElementById("generate").addEventListener("click", function() {
 

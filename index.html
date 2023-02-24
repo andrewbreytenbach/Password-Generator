@@ -7,22 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-    <!--  -->
+    <!-- This links the css stylesheet so the html page can be styled appropriately. -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!--  -->
+    <!-- This is the header element for the html file that contains the h1 element. -->
     <main class="wrapper">
       <header>
         <h1>Password Generator</h1>
       </header>
-      <!--  -->
+      <!-- This is the card that has the main portion of the html page. -->
       <section class="card">
         <article class="card-header">
           <h2>Generate a Password</h2>
         </article>
         <article class="card-body">
-          <!--  -->
+          <!-- This is the textarea element in the html file that will display the generated password via the js file. -->
           <textarea
             readonly
             id="password"
@@ -30,13 +30,13 @@
             aria-label="Generated Password"
           ></textarea>
         </article>
-        <!--  -->
+        <!-- This footer class of the html document contains the button that has the event listener that triggers the function. -->
         <footer class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </footer>
       </section>
     </main>
-    <!--  -->
+    <!-- This links the js file to the html file so it can generate the password. -->
     <script src="script.js"></script>
   </body>
 </html>
