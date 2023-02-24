@@ -42,14 +42,14 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
     passwordCharacters = passwordCharacters.concat(' !"\\#$%&\'()*+,-./:;<=>?@[\\\\]^_`{|}~'.split(""));
 
   
-  // This adds a check to see if at least one character set from among the four options was selected.
-  if (finalPassword.length === 0) {
+  // This adds a check to see if at least one character set from among the four was selected.
+  if (passwordCharacters.length === 0) {
     alert("Please select at least one character set.");
     return;
   }
 
   // This stores the newPassword variable after randomly assigning a list of the items from the array and the preceding if statements.
-  var newPassword = " "
+  var newPassword = ""
   for (var i = 0; i < passwordPrompt; i++) {
     newPassword += passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
   }
@@ -57,6 +57,5 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
   // This stores the newPassword from the previous for statement and inserts it into the HTML file by using the document selector option. 
   var passwordText = document.querySelector("#password");
     passwordText.value = newPassword
-
   }})
 
