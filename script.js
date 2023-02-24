@@ -9,6 +9,12 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
     return;
   }
   
+  // This uses an if statement to enforce password length between 8 and 128 characters.
+  if (passwordPrompt < 8 || passwordPrompt > 128) {
+    alert("Invalid password length. Please enter a number between 8 and 128 characters.");
+    return;
+  }
+
   // This creates an array that will later be plugged into a randomized function to create the random password. 
   var passwordCharacters = []
   
