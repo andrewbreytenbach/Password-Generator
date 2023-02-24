@@ -41,6 +41,13 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
   if (symbolCaseOption) {
     passwordCharacters = passwordCharacters.concat(' !"\\#$%&\'()*+,-./:;<=>?@[\\\\]^_`{|}~'.split(""));
 
+  
+  // This adds a check to see if at least one character set from among the four options was selected.
+  if (finalPassword.length === 0) {
+    alert("Please select at least one character set.");
+    return;
+  }
+
   // This stores the newPassword variable after randomly assigning a list of the items from the array and the preceding if statements.
   var newPassword = " "
   for (var i = 0; i < passwordPrompt; i++) {
