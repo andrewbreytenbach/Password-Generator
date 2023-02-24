@@ -42,6 +42,7 @@ Project Link: [https://github.com/andrewbreytenbach/Password-Generator](https://
 
 ## Acknowledgments
 
+* [https://github.com/coding-boot-camp/friendly-parakeet] (Code Source/Starter Code)
 * [https://www.w3docs.com/] (W3 Docs)
 * [https://developer.mozilla.org/en-US/] (MDN Web Docs)
 * [https://html.com/] (HTML for Beginners)
