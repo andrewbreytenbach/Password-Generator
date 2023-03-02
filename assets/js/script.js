@@ -1,5 +1,6 @@
 // Add event listener to generate button. I didn't need the var generateBtn = document.querySelector("#generate"); that came with the starter code if I wrote it this way. 
-var generatedPassword = document.getElementById("generate").addEventListener("click", function() {
+var generateBtn = document.querySelector("#generate");
+  generateBtn.addEventListener("click", function() {
 
   var passwordPrompt = prompt("How many characters would you like your password to have? Please enter a number between 8 and 128 characters.");
   
@@ -39,7 +40,7 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
   var symbolCaseOption = confirm("Would you like to include symbol characters in your password?");
   if (symbolCaseOption) {
     passwordCharacters = passwordCharacters.concat(' !"\\#$%&\'()*+,-./:;<=>?@[\\\\]^_`{|}~'.split(""));
-
+  }
   
   // This adds a check to see if at least one character set from among the four was selected.
   if (passwordCharacters.length === 0) {
@@ -48,13 +49,14 @@ var generatedPassword = document.getElementById("generate").addEventListener("cl
   }
 
   // This stores the newPassword variable after randomly assigning a list of the items from the array and the preceding if statements.
-  var newPassword = ""
+  var newPassword = "";
   for (var i = 0; i < passwordPrompt; i++) {
-    newPassword += passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
+    var randomIndex = Math.floor(Math.random() * passwordCharacters.length);
+    newPassword += passwordCharacters[randomIndex];
   }
 
   // This stores the newPassword from the previous for statement and inserts it into the HTML file by using the document selector option. 
   var passwordText = document.querySelector("#password");
-    passwordText.value = newPassword
-  }})
+    passwordText.value = newPassword;
+  })
 
