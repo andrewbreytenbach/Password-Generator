@@ -20,11 +20,11 @@ To get a local copy up and running, simply view the index.html file, stle.css, o
 
 Once the user fist acceses the website, the following image is what they will find: 
 
-![Website without the password generated](/empty.png "Empty Image")
+![Website without the password generated](assets/empty.png "Empty Image")
 
 After clicking the 'Generate Password' red button, the user will be given a series of prompts asking them to enter in the number of characters they want the password to have, and then a series of prompts asking if it needs to be uppercase, lowercase, numeric, or containing symbols. Once all of these prompt boxes are selected, then the user is given a generated password in the text box as shown below:
 
-![Website the password generated](/generated-password.png "Generated Password")
+![Website with the password generated](assets/generated-password.png "Generated Password")
 
 Based on the answers given to each prompt, the specific criteria of each password will differ slightly. 
 
